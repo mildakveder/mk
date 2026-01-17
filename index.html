@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Mitchell | Singer & Songwriter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #faf9f7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c9a456;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #home {
+            padding-top: 8rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        #home .tagline {
+            font-size: 1.3rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        #home .intro {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            border-bottom: 2px solid #c9a456;
+            padding-bottom: 0.5rem;
+        }
+
+        #about p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        #music ul, #services ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        #music li, #services li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        #music li::before, #services li::before {
+            content: "\2022";
+            color: #c9a456;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        #events {
+            background-color: #f0ebe3;
+            margin: 0;
+            max-width: 100%;
+            padding: 5rem 2rem;
+        }
+
+        #events .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .event-item {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #c9a456;
+        }
+
+        .event-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .event-item p {
+            color: #666;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact a {
+            color: #c9a456;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #c9a456;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Sarah Mitchell</h1>
+        <p class="tagline">Singer & Songwriter</p>
+        <p class="intro">Welcome to my world of music. With a voice that blends soul, jazz, and contemporary pop, I create unforgettable moments through song.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Sarah Mitchell is a classically trained vocalist with over 10 years of experience performing at venues across the country. Her rich, emotive voice has captivated audiences from intimate jazz clubs to grand concert halls.</p>
+        <p>Growing up surrounded by music, Sarah began singing at age 7 and went on to study vocal performance at the Royal Academy of Music. Her unique style blends traditional techniques with contemporary influences, creating a sound that is both timeless and fresh.</p>
+        <p>When not on stage, Sarah teaches private vocal lessons and works as a session vocalist for various recording projects.</p>
+    </section>
+
+    <section id="music">
+        <h2>Music</h2>
+        <p>Explore my discography and musical journey:</p>
+        <ul>
+            <li><strong>"Midnight Echoes"</strong> (2024) - Latest album featuring 12 original tracks</li>
+            <li><strong>"Golden Hour"</strong> (2022) - Acoustic EP with stripped-back arrangements</li>
+            <li><strong>"First Light"</strong> (2020) - Debut album that reached #15 on indie charts</li>
+            <li><strong>"Live at The Blue Room"</strong> (2019) - Live recording from sold-out performance</li>
+        </ul>
+        <p>Available on all major streaming platforms including Spotify, Apple Music, and Amazon Music.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Available for bookings and collaborations:</p>
+        <ul>
+            <li><strong>Live Performances</strong> - Weddings, corporate events, private parties</li>
+            <li><strong>Session Vocals</strong> - Studio recording for your projects</li>
+            <li><strong>Vocal Coaching</strong> - Private lessons for all skill levels</li>
+            <li><strong>Songwriting</strong> - Custom songs for special occasions</li>
+        </ul>
+    </section>
+
+    <section id="events">
+        <div class="content">
+            <h2>Upcoming Events</h2>
+            <div class="event-item">
+                <h3>Jazz Night at The Velvet Lounge</h3>
+                <p>February 14, 2026 | 8:00 PM | London</p>
+            </div>
+            <div class="event-item">
+                <h3>Spring Concert Series</h3>
+                <p>March 22, 2026 | 7:30 PM | Manchester</p>
+            </div>
+            <div class="event-item">
+                <h3>Music Festival Performance</h3>
+                <p>April 10, 2026 | 6:00 PM | Brighton</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>For bookings and inquiries, please reach out:</p>
+        <p>Email: <a href="mailto:hello@sarahmitchell.com">hello@sarahmitchell.com</a></p>
+        <p>Management: <a href="mailto:bookings@sarahmitchell.com">bookings@sarahmitchell.com</a></p>
+
+        <div class="social-links">
+            <a href="https://instagram.com/sarahmitchellmusic" target="_blank">Instagram: @sarahmitchellmusic</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sarah Mitchell. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links (fallback for older browsers)
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Add active state to nav links on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '#fff';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = '#c9a456';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
