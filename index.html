@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milda Sings | Vocalist & Songwriter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,17 +19,17 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #faf9f7;
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background-color: #faf8f5;
         }
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #1a1a1a;
+            background-color: #1a2a4a;
             padding: 1rem 2rem;
             z-index: 1000;
         }
@@ -39,9 +42,11 @@
         }
 
         nav a {
+            font-family: 'Cormorant Garamond', serif;
             color: #fff;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
             letter-spacing: 1px;
             transition: color 0.3s;
         }
@@ -66,35 +71,43 @@
         }
 
         #home h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a2a4a;
+            font-weight: 400;
         }
 
         #home .tagline {
-            font-size: 1.3rem;
-            color: #666;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #6b7c93;
             font-style: italic;
             margin-bottom: 2rem;
+            letter-spacing: 2px;
         }
 
         #home .intro {
             font-size: 1.1rem;
             max-width: 650px;
             margin: 0 auto;
+            color: #4a5568;
         }
 
         h2 {
-            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: #1a1a1a;
+            color: #1a2a4a;
             border-bottom: 2px solid #c9a456;
             padding-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         #about p {
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            color: #4a5568;
         }
 
         .photo-gallery {
@@ -109,8 +122,8 @@
             width: 300px;
             height: 400px;
             object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            box-shadow: 0 8px 25px rgba(26,42,74,0.15);
         }
 
         #skills ul, #experience ul, #education ul {
@@ -122,7 +135,8 @@
             padding: 0.8rem 0;
             padding-left: 1.5rem;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            color: #4a5568;
         }
 
         #skills li::before {
@@ -138,32 +152,37 @@
             padding: 1.5rem;
             margin-bottom: 1rem;
             border-left: 4px solid #c9a456;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 12px rgba(26,42,74,0.08);
         }
 
         .experience-item h3, .education-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
             margin-bottom: 0.3rem;
-            color: #1a1a1a;
+            color: #1a2a4a;
+            font-weight: 600;
         }
 
         .experience-item .role, .education-item .detail {
+            font-family: 'Cormorant Garamond', serif;
             color: #c9a456;
             font-style: italic;
             margin-bottom: 0.3rem;
+            font-size: 1.1rem;
         }
 
         .experience-item .date, .education-item .date {
-            color: #888;
+            color: #8896a6;
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
         }
 
         .experience-item p, .education-item p {
-            color: #555;
+            color: #4a5568;
         }
 
         #experience {
-            background-color: #f0ebe3;
+            background-color: #f0f3f7;
             margin: 0;
             max-width: 100%;
             padding: 5rem 2rem;
@@ -174,22 +193,66 @@
             margin: 0 auto;
         }
 
+        #watch {
+            text-align: center;
+            background-color: #1a2a4a;
+            margin: 0;
+            max-width: 100%;
+            padding: 5rem 2rem;
+        }
+
+        #watch .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #watch h2 {
+            color: #fff;
+            border-bottom-color: #c9a456;
+        }
+
+        #watch p {
+            color: #c9a456;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+
         #contact {
             text-align: center;
         }
 
         #contact p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 1rem;
+            color: #4a5568;
         }
 
         #contact a {
             color: #c9a456;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         #contact a:hover {
-            text-decoration: underline;
+            color: #1a2a4a;
         }
 
         .social-links {
@@ -199,8 +262,8 @@
         .social-links a {
             display: inline-block;
             margin: 0 1rem;
-            font-size: 1.1rem;
-            color: #1a1a1a;
+            font-size: 1.05rem;
+            color: #1a2a4a;
             transition: color 0.3s;
         }
 
@@ -211,8 +274,10 @@
         footer {
             text-align: center;
             padding: 2rem;
-            background-color: #1a1a1a;
+            background-color: #1a2a4a;
             color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 600px) {
@@ -222,11 +287,15 @@
             }
 
             nav a {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
             #home h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+
+            #home .tagline {
+                font-size: 1.1rem;
             }
 
             section {
@@ -245,6 +314,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#watch">Watch</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
@@ -267,6 +337,16 @@
         <p>With a background in dance, theatre, and photo-modelling, I bring more than just vocals to the stage. My performances combine musical talent with expressive movement and genuine audience connection.</p>
         <p>After years of balancing music with my career as an Executive Assistant, I made the leap to pursue music full-time in September 2025. Now I dedicate myself entirely to creating memorable musical experiences.</p>
         <p>I speak five languages and sing in three, allowing me to connect with diverse audiences and bring an international flair to my repertoire.</p>
+    </section>
+
+    <section id="watch">
+        <div class="content">
+            <h2>Watch</h2>
+            <p>Performance highlights</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
@@ -340,7 +420,7 @@
     <section id="contact">
         <h2>Get In Touch</h2>
         <p>For bookings and inquiries, please reach out:</p>
-        <p>Email: <a href="mailto:hello@mildasings.com">hello@mildasings.com</a></p>
+        <p>Email: <a href="mailto:mildasings@gmail.com">mildasings@gmail.com</a></p>
 
         <div class="social-links">
             <a href="https://instagram.com/mildasings" target="_blank">Instagram: @mildasings</a>
