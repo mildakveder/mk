@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mildakveder.github.io/mk/index.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mildakveder.github.io/mk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mildakveder.github.io/mk/de.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mildakveder.github.io/mk/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mildakveder.github.io/mk/index.html"/>
+  </url>
+  <url>
+    <loc>https://mildakveder.github.io/mk/de.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mildakveder.github.io/mk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mildakveder.github.io/mk/de.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mildakveder.github.io/mk/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mildakveder.github.io/mk/index.html"/>
+  </url>
+  <url>
+    <loc>https://mildakveder.github.io/mk/fr.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mildakveder.github.io/mk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mildakveder.github.io/mk/de.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mildakveder.github.io/mk/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mildakveder.github.io/mk/index.html"/>
+  </url>
+</urlset>

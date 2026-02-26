@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mildakveder.github.io/mk/sitemap.xml
