@@ -1,22 +1,1183 @@
-<p class="bio-text">
-  Versatile alto vocalist specializing in acoustic pop covers, love songs, and personalized songwriting. Every performance brings warmth, stage presence, and a genuine connection with the audience.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milda Sings | Singer & Songwriter</title>
+    <meta name="description" content="Milda Sings - Versatile alto singer and songwriter based in Zurich, Switzerland. Live music for weddings, parties, corporate events and restaurants. Acoustic pop covers, love songs, jazz standards, rock classics and personalized songs. Solo or with a band throughout Switzerland. Multilingual repertoire in English, Spanish and Lithuanian. Book now from CHF 200.">
 
-<h3>Upcoming Gigs</h3>
-<ul class="gigs-list">
-  <li class="gig-item">
-    <div class="gig-date">Dec 5 &amp; 6, 2026</div>
-    <div class="gig-details">
-      <strong>L'Escalade</strong> (near Église St. Antoine de Padoue)<br>
-      <span>Sat 4:00–6:30 pm &bull; Sun 3:30–5:00 pm</span>
-    </div>
-  </li>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Milda Sings | Singer & Songwriter">
+    <meta property="og:description" content="Versatile alto singer and songwriter based in Zurich, Switzerland. Live music for weddings, parties, corporate events and restaurants. Pop covers, jazz, rock and personalized songs. Book now from CHF 200.">
+    <meta property="og:image" content="https://mildakveder.github.io/mk/pic6.jpg">
+    <meta property="og:url" content="https://mildakveder.github.io/mk/index.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_CH">
+    <meta property="og:locale:alternate" content="fr_CH">
+    <meta property="og:site_name" content="Milda Sings">
 
-  <li class="gig-item">
-    <div class="gig-date">Jun 11, 2027</div>
-    <div class="gig-details">
-      <strong>Funky Friday</strong> — Kulti Wetzikon<br>
-      <span>11:00 pm</span>
-    </div>
-  </li>
-</ul>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Milda Sings | Singer & Songwriter">
+    <meta name="twitter:description" content="Versatile alto singer and songwriter based in Zurich. Live music for weddings, parties and events throughout Switzerland. Book now from CHF 200.">
+    <meta name="twitter:image" content="https://mildakveder.github.io/mk/pic6.jpg">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://mildakveder.github.io/mk/index.html">
+    <link rel="alternate" hreflang="de" href="https://mildakveder.github.io/mk/de.html">
+    <link rel="alternate" hreflang="fr" href="https://mildakveder.github.io/mk/fr.html">
+    <link rel="alternate" hreflang="x-default" href="https://mildakveder.github.io/mk/index.html">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://mildakveder.github.io/mk/index.html">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background-color: #faf8f5;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1a2a4a;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c9a456;
+        }
+
+        .lang-switch {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lang-switch a {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            margin-left: 0.3rem;
+        }
+
+        .lang-switch a.active {
+            background: #c9a456;
+            border-color: #c9a456;
+            color: #1a2a4a;
+        }
+
+        .burger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .burger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: #fff;
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #home {
+            padding-top: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+            background: #1a2a4a;
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .home-content {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .home-text {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            padding: 7rem 3rem 4rem 7%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-image {
+            flex: 0 0 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a2a4a;
+        }
+
+        .home-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        #home h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        #home .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: #c9a456;
+            font-style: italic;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        #home .intro {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0;
+            margin-bottom: 0.5rem;
+            color: #cbd5e0;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #1a2a4a;
+            border-bottom: 2px solid #c9a456;
+            padding-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        #background p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #4a5568;
+        }
+
+        .subsection-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #c9a456;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .skills-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .skills-list li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.05rem;
+            color: #4a5568;
+        }
+
+        .skills-list li::before {
+            content: "\2022";
+            color: #c9a456;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        .experience-item, .education-item {
+            background: #fff;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 0.8rem;
+            border-left: 4px solid #c9a456;
+            box-shadow: 0 2px 12px rgba(26,42,74,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(26,42,74,0.12);
+        }
+
+        .experience-item h4, .education-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            color: #1a2a4a;
+            font-weight: 600;
+        }
+
+        .experience-item .role, .education-item .detail {
+            font-family: 'Cormorant Garamond', serif;
+            color: #c9a456;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .experience-item .date, .education-item .date {
+            color: #8896a6;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item p, .education-item p {
+            color: #4a5568;
+        }
+
+        #samples {
+            text-align: center;
+            background-color: #1a2a4a;
+            margin: 0;
+            max-width: 100%;
+            padding: 5rem 2rem;
+        }
+
+        #samples .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #samples h2 {
+            color: #fff;
+            border-bottom-color: #c9a456;
+        }
+
+        #samples p {
+            color: #c9a456;
+            margin-bottom: 1.5rem;
+        }
+
+        .audio-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: #fff;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .audio-samples {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .audio-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .audio-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+
+        .audio-title {
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .audio-item audio {
+            width: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            margin: 3rem auto 0;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        #background {
+            background-color: #1a2a4a;
+            margin: 0;
+            max-width: 100%;
+            padding: 6rem 2rem;
+            padding-top: 5rem;
+        }
+
+        #background .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #background h2 {
+            color: #fff;
+            border-bottom-color: #c9a456;
+        }
+
+        #background .intro-text {
+            padding-top: 1rem;
+        }
+
+        #background .intro-text p {
+            color: #e2e8f0;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        #background .subsection-title {
+            color: #fff;
+        }
+
+        #background .experience-item, #background .education-item {
+            background: #243a5c;
+            border-left-color: #c9a456;
+        }
+
+        #background .experience-item h4, #background .education-item h4 {
+            color: #fff;
+        }
+
+        #background .experience-item .role, #background .education-item .detail {
+            color: #c9a456;
+        }
+
+        #background .experience-item .date, #background .education-item .date {
+            color: #a0aec0;
+        }
+
+        #background .experience-item p, #background .education-item p {
+            color: #e2e8f0;
+        }
+
+        #background .skills-list li {
+            color: #e2e8f0;
+        }
+
+        #contact {
+            text-align: center;
+            background-color: #1a2a4a;
+            margin: 0;
+            max-width: 100%;
+            padding: 5rem 2rem;
+            padding-bottom: 8rem;
+        }
+
+        .contact-spacer {
+            height: 4rem;
+        }
+
+        .contact-details {
+            text-align: left;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        #contact .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #contact h2 {
+            color: #fff;
+            border-bottom-color: #c9a456;
+        }
+
+        #contact p {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        #contact a {
+            color: #c9a456;
+        }
+
+        #contact a:hover {
+            color: #fff;
+        }
+
+        #repertoire {
+            background-color: #faf8f5;
+            margin: 0;
+            max-width: 100%;
+            padding: 5rem 1.5rem;
+        }
+
+        #repertoire .content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .repertoire-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(26,42,74,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .repertoire-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26,42,74,0.15);
+        }
+
+        .repertoire-item img {
+            transition: transform 0.4s ease;
+        }
+
+        .repertoire-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .repertoire-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .repertoire-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .repertoire-category {
+            padding: 1.5rem;
+        }
+
+        .repertoire-category h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #1a2a4a;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .repertoire-category .category-subtitle {
+            font-size: 0.95rem;
+            color: #c9a456;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .repertoire-category ul {
+            list-style: none;
+            columns: 1;
+        }
+
+        .repertoire-category li {
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            color: #4a5568;
+            border-bottom: 1px solid #f0ece6;
+            break-inside: avoid;
+        }
+
+        .repertoire-category li:last-child {
+            border-bottom: none;
+        }
+
+        .song-artist {
+            color: #8896a6;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .repertoire-item {
+                flex-direction: row;
+            }
+
+            .repertoire-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .repertoire-item img {
+                width: 300px;
+                height: auto;
+                min-height: 350px;
+                flex-shrink: 0;
+            }
+
+            .repertoire-category {
+                padding: 2rem;
+                flex: 1;
+            }
+
+            .repertoire-category ul {
+                columns: 2;
+                column-gap: 2rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a2a4a;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 850px) {
+            nav {
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #1a2a4a;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+
+            nav.nav-open ul {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            nav.nav-open .burger span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            nav.nav-open .burger span:nth-child(2) {
+                opacity: 0;
+            }
+
+            nav.nav-open .burger span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            nav a {
+                font-size: 1.2rem;
+            }
+
+            .lang-switch {
+                position: static;
+                transform: none;
+            }
+
+            .lang-switch a {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            #home {
+                padding-top: 0;
+                min-height: auto;
+            }
+
+            .home-content {
+                flex-direction: column-reverse;
+                min-height: auto;
+            }
+
+            .home-text {
+                flex: none;
+                text-align: center;
+                max-width: 100%;
+                padding: 2rem 1.5rem 3rem;
+            }
+
+            .home-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .home-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            #home h1 {
+                font-size: 2.8rem;
+            }
+
+            #home .tagline {
+                font-size: 1rem;
+            }
+
+            #home .intro {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .repertoire-item img {
+                height: 220px;
+            }
+
+            .repertoire-category h3 {
+                font-size: 1.3rem;
+            }
+
+            .repertoire-category li {
+                font-size: 0.95rem;
+                padding: 0.4rem 0;
+            }
+
+            .song-artist {
+                display: block;
+                font-size: 0.8rem;
+            }
+
+            .audio-samples {
+                max-width: 100%;
+            }
+
+            .audio-item {
+                padding: 1rem;
+            }
+
+            .audio-heading {
+                font-size: 1.3rem;
+            }
+
+            .video-container {
+                margin: 0 -1rem;
+                width: calc(100% + 2rem);
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MusicGroup",
+          "@id": "https://mildakveder.github.io/mk/#musician",
+          "name": "Milda Sings",
+          "alternateName": "Milda Kveder",
+          "description": "Versatile alto singer for weddings, parties and events in Zurich and across Switzerland. Acoustic pop covers, love songs and personalized songs.",
+          "url": "https://mildakveder.github.io/mk/index.html",
+          "image": "https://mildakveder.github.io/mk/pic6.jpg",
+          "genre": ["Pop", "Jazz", "Rock", "Acoustic"],
+          "email": "milda.kveder@gmail.com",
+          "location": {
+            "@type": "Place",
+            "name": "Zurich, Switzerland",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Zurich",
+              "addressCountry": "CH"
+            }
+          },
+          "knowsLanguage": ["en", "de", "fr", "es", "lt"],
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "name": "Live Music for Weddings",
+              "description": "Solo and band performances at wedding ceremonies and receptions, including personalized songs.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Switzerland"
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "CHF",
+                "minPrice": "200",
+                "maxPrice": "1000"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Live Music for Parties & Events",
+              "description": "High-energy performances with sing-along hits and a diverse repertoire.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Switzerland"
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "CHF",
+                "minPrice": "200",
+                "maxPrice": "1000"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Personalized Songwriting",
+              "description": "Custom-written songs for weddings, birthdays and special occasions.",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Switzerland"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://mildakveder.github.io/mk/#website",
+          "name": "Milda Sings",
+          "url": "https://mildakveder.github.io/mk/",
+          "inLanguage": ["en", "de", "fr"],
+          "description": "Official website of Milda Sings - singer and songwriter based in Zurich, Switzerland."
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <button class="burger" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('nav-open')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#samples">Samples</a></li>
+            <li><a href="#repertoire">Repertoire</a></li>
+            <li><a href="#background">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="index.html" class="active">EN</a>
+            <a href="de.html">DE</a>
+            <a href="fr.html">FR</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h1>Milda Sings</h1>
+                <p class="tagline">Singer & Songwriter</p>
+                <p class="intro">Versatile alto singer specializing in acoustic pop covers, love songs and personalized songwriting. I bring warmth, stage presence and genuine connection to every performance.</p>
+            </div>
+            <div class="home-image">
+                <img src="pic6.jpg" alt="Milda Sings">
+            </div>
+        </div>
+    </section>
+
+    <section id="samples">
+        <div class="content">
+            <h2>Samples</h2>
+            <p class="audio-heading">Melodies by Milda</p>
+            <div class="audio-samples">
+                <div class="audio-item">
+                    <p class="audio-title">If I Ain't Got You - Alicia Keys (Cover)</p>
+                    <audio controls>
+                        <source src="If I aint got you Alicia Keys cover.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="repertoire">
+        <div class="content">
+            <h2>Repertoire</h2>
+
+            <div class="repertoire-item animate-on-scroll">
+                <img src="pic3.jpg" alt="Milda Sings - Weddings">
+                <div class="repertoire-category">
+                    <h3>Romantic Melodies</h3>
+                    <p class="category-subtitle">Weddings</p>
+                    <ul>
+                        <li>All of Me <span class="song-artist">- John Legend</span></li>
+                        <li>Hallelujah <span class="song-artist">- Leonard Cohen</span></li>
+                        <li>Can't Help Falling in Love <span class="song-artist">- Elvis Presley</span></li>
+                        <li>A Thousand Years <span class="song-artist">- Christina Perri</span></li>
+                        <li>Every Breath You Take <span class="song-artist">- The Police</span></li>
+                        <li>Make You Feel My Love <span class="song-artist">- Adele</span></li>
+                        <li>Stand by Me <span class="song-artist">- Ben E. King</span></li>
+                        <li>If I Ain't Got You <span class="song-artist">- Alicia Keys</span></li>
+                        <li>La Vie en Rose <span class="song-artist">- Edith Piaf</span></li>
+                        <li>(Everything I Do) I Do It for You <span class="song-artist">- Bryan Adams</span></li>
+                        <li>Just the Two of Us <span class="song-artist">- Bill Withers</span></li>
+                        <li>Heaven <span class="song-artist">- Bryan Adams</span></li>
+                        <li>Hero <span class="song-artist">- Enrique Iglesias</span></li>
+                        <li>I Say a Little Prayer <span class="song-artist">- Aretha Franklin</span></li>
+                        <li>A Natural Woman <span class="song-artist">- Aretha Franklin</span></li>
+                        <li>Dream a Little Dream of Me <span class="song-artist">- Ella Fitzgerald</span></li>
+                        <li>Love <span class="song-artist">- Nat King Cole</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="repertoire-item animate-on-scroll">
+                <img src="pic4.jpg" alt="Milda Sings - Parties">
+                <div class="repertoire-category">
+                    <h3>Sing-Along Hits</h3>
+                    <p class="category-subtitle">Parties</p>
+                    <ul>
+                        <li>Despacito <span class="song-artist">- Luis Fonsi</span></li>
+                        <li>Dance Monkey <span class="song-artist">- Tones and I</span></li>
+                        <li>Flowers <span class="song-artist">- Miley Cyrus</span></li>
+                        <li>Smells Like Teen Spirit <span class="song-artist">- Nirvana</span></li>
+                        <li>Dancing Queen <span class="song-artist">- ABBA</span></li>
+                        <li>Zombie <span class="song-artist">- The Cranberries</span></li>
+                        <li>I Will Survive <span class="song-artist">- Gloria Gaynor</span></li>
+                        <li>Mamma Mia <span class="song-artist">- ABBA</span></li>
+                        <li>Seven Nation Army <span class="song-artist">- The White Stripes</span></li>
+                        <li>What's Up? <span class="song-artist">- 4 Non Blondes</span></li>
+                        <li>Girls Just Want to Have Fun <span class="song-artist">- Cyndi Lauper</span></li>
+                        <li>Don't Speak <span class="song-artist">- No Doubt</span></li>
+                        <li>Bailando <span class="song-artist">- Enrique Iglesias</span></li>
+                        <li>Simply the Best <span class="song-artist">- Tina Turner</span></li>
+                        <li>Sweet Caroline <span class="song-artist">- Status Quo</span></li>
+                        <li>Summer of '69 <span class="song-artist">- Bryan Adams</span></li>
+                        <li>Hit the Road Jack <span class="song-artist">- Ray Charles</span></li>
+                        <li>I Feel Good <span class="song-artist">- James Brown</span></li>
+                        <li>La Bamba <span class="song-artist">- Ritchie Valens</span></li>
+                        <li>Holiday <span class="song-artist">- Green Day</span></li>
+                        <li>Johnny B. Goode <span class="song-artist">- Chuck Berry</span></li>
+                        <li>Vivir Mi Vida <span class="song-artist">- Marc Anthony</span></li>
+                        <li>Volare <span class="song-artist">- Gipsy Kings</span></li>
+                        <li>Self Esteem <span class="song-artist">- The Offspring</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="repertoire-item animate-on-scroll">
+                <img src="photo1.jpg" alt="Milda Sings - Restaurants">
+                <div class="repertoire-category">
+                    <h3>Ambient Lounge</h3>
+                    <p class="category-subtitle">Restaurants</p>
+                    <ul>
+                        <li>Blinding Lights <span class="song-artist">- The Weeknd</span></li>
+                        <li>Three Little Birds <span class="song-artist">- Bob Marley</span></li>
+                        <li>Ain't No Sunshine <span class="song-artist">- Bill Withers</span></li>
+                        <li>Fly Me to the Moon <span class="song-artist">- Frank Sinatra</span></li>
+                        <li>Smooth Operator <span class="song-artist">- Sade</span></li>
+                        <li>Lovely Day <span class="song-artist">- Bill Withers</span></li>
+                        <li>Wicked Game <span class="song-artist">- Chris Isaak</span></li>
+                        <li>Sunny <span class="song-artist">- Boney M.</span></li>
+                        <li>Fields of Gold <span class="song-artist">- Sting</span></li>
+                        <li>Summertime <span class="song-artist">- Ella Fitzgerald</span></li>
+                        <li>Sway <span class="song-artist">- Dean Martin</span></li>
+                        <li>Blue Moon <span class="song-artist">- Rodgers & Hart</span></li>
+                        <li>Sympathique <span class="song-artist">- Pink Martini</span></li>
+                        <li>Chan Chan <span class="song-artist">- Buena Vista Social Club</span></li>
+                        <li>Rester Seule <span class="song-artist">- Louane</span></li>
+                        <li>Solo le Pido a Dios <span class="song-artist">- Leon Gieco</span></li>
+                        <li>Spalvoti Sapnai <span class="song-artist">- Andrius Mamontovas</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="background">
+        <div class="content">
+            <h2>About Me</h2>
+
+            <div class="intro-text">
+                <p>With my background in dance and theater, my performances combine musicality, movement and a genuine connection with the audience.</p>
+                <p>My cosmopolitan flair allows me to connect with all kinds of people, and my love of music helps create unforgettable musical experiences.</p>
+            </div>
+
+            <h3 class="subsection-title">Experience</h3>
+
+            <div class="experience-item">
+                <h4>Funk/Soul Band C-Side Collective</h4>
+                <p class="role">Lead Singer</p>
+                <p class="date">2026 – Present</p>
+            </div>
+
+            <div class="experience-item">
+                <h4>International Weddings</h4>
+                <p class="role">Soloist & Band Singer</p>
+                <p class="date">2016 – Present</p>
+                <p>Performing at wedding ceremonies & receptions. Specializing in personalized songs for the bride and groom as well as the couple's favorite repertoire.</p>
+            </div>
+
+            <div class="experience-item">
+                <h4>Rock Cover Band NFG</h4>
+                <p class="role">Lead Singer</p>
+                <p class="date">2023 – Present</p>
+                <p>Thrilling audiences with nostalgic rock hits and high-energy performances.</p>
+            </div>
+
+            <div class="experience-item">
+                <h4>Pop & Jazz Collaborations</h4>
+                <p class="role">Lead Singer</p>
+                <p class="date">2021 – 2025</p>
+                <p>Performing with guitar, saxophone and cello at weddings, restaurants and cultural events such as L'escalade and Gourmandiv. Over 50 concerts in France and Switzerland.</p>
+            </div>
+
+            <div class="experience-item">
+                <h4>A Cappella Choir Vocability</h4>
+                <p class="role">Alto Singer</p>
+                <p class="date">2014 – 2015</p>
+                <p>Foundations in vocal harmony and ensemble performance.</p>
+            </div>
+
+            <h3 class="subsection-title">Training</h3>
+
+            <div class="education-item">
+                <h4>Dance Classes</h4>
+                <p class="detail">Dance schools in Geneva & Zurich</p>
+                <p class="date">2022 – Present</p>
+                <p>Training in Latin, ballroom and modern dance styles. Developing movement, choreography and improvisation.</p>
+            </div>
+
+            <div class="education-item">
+                <h4>Jazz Singing</h4>
+                <p class="detail">Udemy Course</p>
+                <p class="date">2023</p>
+            </div>
+
+            <div class="education-item">
+                <h4>English Theater Group</h4>
+                <p class="detail">University</p>
+                <p class="date">2014 – 2015</p>
+                <p>Stage presence and character portrayal.</p>
+            </div>
+
+            <div class="education-item">
+                <h4>Private Acoustic Guitar Lessons</h4>
+                <p class="detail">Local music school</p>
+                <p class="date">2007 – 2010</p>
+            </div>
+
+            <h3 class="subsection-title">Core Skills</h3>
+            <ul class="skills-list">
+                <li>Personalized songwriting (songs for weddings, birthdays and other special occasions)</li>
+                <li>Acoustic guitar & ukulele</li>
+                <li>Speak 5 languages, sing in 3 (English, Spanish, Lithuanian)</li>
+                <li>Building rapport with the audience</li>
+                <li>Dance, movement & stage presence</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact</h2>
+            <p>Based in Zurich, available for performances throughout Switzerland and internationally.</p>
+            <p>Prices range from CHF 200 to CHF 1,000, depending on the number of songs, the venue, the timing, additional musicians and special requests.</p>
+            <p>I'm happy to answer any questions about availability, pricing or anything else.</p>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:milda.kveder@gmail.com">milda.kveder@gmail.com</a></p>
+            </div>
+            <div class="contact-spacer"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Milda Sings. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector('nav').classList.remove('nav-open');
+                }
+            });
+        });
+
+        // Add active state to nav links on scroll
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul a');
+
+            let current = 'home';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '#fff';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = '#c9a456';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        updateActiveNav();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
