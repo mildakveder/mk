@@ -424,6 +424,23 @@
             border-radius: 4px;
         }
 
+        .video-row {
+            display: flex;
+            gap: 16px;
+            margin-top: 3rem;
+            margin-left: calc(50% - 50vw + 2rem);
+            margin-right: calc(50% - 50vw + 2rem);
+        }
+
+        .video-row iframe {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            border-radius: 4px;
+        }
+
         #background {
             background-color: #1a2a4a;
             margin: 0;
@@ -795,6 +812,12 @@
                 margin: 0 -1rem;
                 width: calc(100% + 2rem);
             }
+
+            .video-row {
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -932,12 +955,23 @@
                     </audio>
                 </div>
             </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+        
+		<div class="video-row">
+			<iframe src="https://www.youtube.com/embed/NAWzfKtvlL4?si=fyl-1hftCJibdJRq"
+				title="Video 1" loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/D0QHy6WlpR0?si=qrHG-9PPjMCXa0V8"
+				title="Video 2" loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/IY2c-Rg1uNU?si=O0-i_BBc7BDcBF6F"
+				title="Video 3" loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+  </div>
         </div>
+  
     </section>
 
     <section id="repertoire">
