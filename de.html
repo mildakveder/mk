@@ -424,6 +424,23 @@
             border-radius: 4px;
         }
 
+        .video-row {
+            display: flex;
+            gap: 16px;
+            margin-top: 3rem;
+            margin-left: calc(50% - 50vw + 2rem);
+            margin-right: calc(50% - 50vw + 2rem);
+        }
+
+        .video-row iframe {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            border-radius: 4px;
+        }
+
         #background {
             background-color: #1a2a4a;
             margin: 0;
@@ -795,6 +812,12 @@
                 margin: 0 -1rem;
                 width: calc(100% + 2rem);
             }
+
+            .video-row {
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -902,6 +925,17 @@
                 <h1>Milda Sings</h1>
                 <p class="tagline">Sängerin & Songwriterin</p>
                 <p class="intro">Vielseitige Alt-Sängerin, spezialisiert auf akustische Pop-Cover, Liebeslieder und personalisiertes Songwriting. Bei jedem Auftritt bringe ich Wärme, Bühnenpräsenz und echte Verbundenheit ein.</p>
+                <p class="intro"> &nbsp </p> 
+                
+                <p class="tagline">Nächste Konzerte</p>
+                <p class="intro"> Dez 5, 2026 Sa. 4:00–6:30 pm </p> 
+                <p class="intro"> L'Escalade @ MAH (Musée d'art et d'histoire de Genève) </p>
+             	<p class="intro"> &nbsp </p> 
+                <p class="intro"> Dez 6, 2026 So. 3:30–5:00 pm </p>  
+                <p class="intro"> L'Escalade @ MAH (Musée d'art et d'histoire de Genève) </p>
+				<p class="intro"> &nbsp </p> 
+				<p class="intro"> Juni 11, 2027 Fr. 11:00 pm </p>  
+                <p class="intro"> Funky Friday @ Kulti Wetzikon </p>
             </div>
             <div class="home-image">
                 <img src="pic6.jpg" alt="Milda Sings">
@@ -922,8 +956,19 @@
                     </audio>
                 </div>
             </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I3fIEFDGhlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-row">
+                <iframe src="https://www.youtube.com/embed/NAWzfKtvlL4?si=fyl-1hftCJibdJRq"
+                    title="Video 1" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/D0QHy6WlpR0?si=qrHG-9PPjMCXa0V8"
+                    title="Video 2" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/IY2c-Rg1uNU?si=O0-i_BBc7BDcBF6F"
+                    title="Video 3" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -1110,7 +1155,7 @@
         <div class="content">
             <h2>Kontakt</h2>
             <p>Ansässig in Zürich, verfügbar für Auftritte in der gesamten Schweiz und international.</p>
-            <p>Die Preise liegen zwischen CHF 200 und CHF 1'000, abhängig von der Anzahl der Lieder, dem Veranstaltungsort, dem Zeitpunkt, zusätzlichen Musikern und besonderen Wünschen.</p>
+            <p>Der Preis hängt individuell von der Anzahl der Lieder, dem Veranstaltungsort, dem Zeitpunkt, zusätzlichen Musikern sowie Ihren besonderen Wünschen ab.</p>
             <p>Ich beantworte gerne alle Fragen zu Verfügbarkeit, Preisen und anderen Anfragen.</p>
             <div class="contact-details">
                 <p>E-Mail: <a href="mailto:milda.kveder@gmail.com">milda.kveder@gmail.com</a></p>
