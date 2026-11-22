@@ -424,6 +424,23 @@
             border-radius: 4px;
         }
 
+        .video-row {
+            display: flex;
+            gap: 16px;
+            margin-top: 3rem;
+            margin-left: calc(50% - 50vw + 2rem);
+            margin-right: calc(50% - 50vw + 2rem);
+        }
+
+        .video-row iframe {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            border-radius: 4px;
+        }
+
         #background {
             background-color: #1a2a4a;
             margin: 0;
@@ -794,6 +811,12 @@
             .video-container {
                 margin: 0 -1rem;
                 width: calc(100% + 2rem);
+            }
+
+            .video-row {
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
             }
         }
     </style>
